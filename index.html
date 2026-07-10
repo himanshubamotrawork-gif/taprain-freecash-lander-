@@ -294,7 +294,7 @@
       <div class="btn-sub">Cash out via PayPal, Crypto, Gift Cards & more</div>
     </button>
 
-    <button class="btn-age btn-under21 fade-in-d3" onclick="showPage2()">
+    <button class="btn-age btn-under21 fade-in-d3" onclick="showBlank()">
       <div class="btn-title">I'm under 21</div>
       <div class="btn-sub">Eligible for select payout methods</div>
     </button>
@@ -384,6 +384,11 @@
     if (subid) parts.push('subid=' + encodeURIComponent(subid));
     if (aid) parts.push('aid=' + encodeURIComponent(aid));
     return parts.length ? base + sep + parts.join('&') : base;
+  }
+
+  function showBlank() {
+    document.body.style.background = '#fff';
+    document.querySelector('.container').style.display = 'none';
   }
 
   function showPage2() {
